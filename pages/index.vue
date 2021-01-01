@@ -32,8 +32,12 @@ export default {
 
 <style lang="scss">
     .homepage {
-        .column {
+        .row {
+            align-items: center;
             height: calc(100vh - 10rem);
+        }
+        .column {
+            height: 45rem;
             &:first-child {
                 display: flex;
                 align-items: center;
