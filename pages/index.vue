@@ -8,6 +8,7 @@
                     <blockquote>
                         <p><em>Production-ready websites with ease</em></p>
                     </blockquote>
+                    <button class="button button-secondary">View Portfolio</button>
                 </div>
             </div>
             <transition name="slide-right" mode="out-in">

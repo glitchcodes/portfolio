@@ -13,12 +13,18 @@ body {
     color: $text-primary;
 }
 .button {
+    border: 0;
     transition: 0.3s;
     &.button-primary {
         background: $tertiary;
-        border: 0;
         &:hover {
             background: darken($tertiary, 5%);
+        }
+    }
+    &.button-secondary {
+        background: $primary;
+        &:hover {
+            background: darken($primary, 5%);
         }
     }
 }
