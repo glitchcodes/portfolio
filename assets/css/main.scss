@@ -1,0 +1,43 @@
+$font-family: 'karla', serif;
+
+$primary: rgb(56, 64, 95);
+$secondary: rgb(14, 19, 31);
+$tertiary: rgb(6, 214, 160);
+$text-primary: rgb(248, 255, 229);
+$text-secondary: rgb(139, 147, 156);
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    background: $secondary;
+    color: $text-primary;
+}
+.button {
+    transition: 0.3s;
+    &.button-primary {
+        background: $tertiary;
+        border: 0;
+        &:hover {
+            background: darken($tertiary, 5%);
+        }
+    }
+}
+
+blockquote { border-left: 0.3rem solid $tertiary; }
+
+// Transition
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition-duration: 0.5s;
+    transition-property: height, opacity, transform;
+    transition-timing-function: cubic-bezier(0.1, 0, 0.55, 1);
+    overflow: hidden;
+}
+.slide-right-leave-active {
+    opacity: 0;
+    transform: translate(2em, 0);
+}
+.slide-right-enter {
+    opacity: 0;
+    transform: translate(-2em, 0);
+}

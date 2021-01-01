@@ -1,62 +1,37 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+    <div>
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar--brand">Glitch</div>
+                <ul class="navbar--links">
+                    <li class="navbar--item">
+                        <a class="button button-primary" href="#">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <Nuxt />
+    </div>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+<style lang="scss">
+.navbar {
+    font-size: 18px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    > .container {
+        display: flex;
+        align-items: center;
+    }
+    .navbar--links, .navbar--item a {
+        margin: 0;
+    }
+    .navbar--links {
+        margin-left: auto;
+    }
+    .navbar--item {
+        list-style: none;
+        margin: 0;
+    }
 }
 </style>
