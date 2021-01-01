@@ -14,7 +14,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .navbar {
     font-size: 18px;
     padding: 1rem;

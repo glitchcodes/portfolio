@@ -6,13 +6,18 @@
                     <h3 class="lead">Vincent Tampos</h3>
                     <p class="subtitle">Web Developer</p>
                     <blockquote>
-                        <p><em>Production-ready websites with ease</em></p>
+                        <p>
+                            <em>
+                                Hello! I'm a freelance and self-taught website developer. Experienced user on Laravel
+                                and VueJs. Passionate to learn more technologies
+                            </em>
+                        </p>
                     </blockquote>
-                    <button class="button button-secondary">View Portfolio</button>
+                    <nuxt-link to="/portfolio" class="button button-secondary">View Portfolio</nuxt-link>
                 </div>
             </div>
             <transition name="slide-right" mode="out-in">
-                <div v-if="show" class="column"></div>
+                <div v-if="show" class="column column-34 column-offset-10"></div>
             </transition>
         </div>
     </div>
@@ -20,6 +25,10 @@
 
 <script>
 export default {
+    transition: {
+        name: 'slide-right',
+        mode: 'out-in'
+    },
     data () {
         return {
             show: false
@@ -31,7 +40,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .homepage {
         .row {
             align-items: center;
@@ -50,6 +59,11 @@ export default {
                 border-radius: 1rem;
                 margin-right: 1rem;
             }
+        }
+    }
+    @media (max-width: 639px) {
+        .homepage .column:nth-child(2) {
+            display: none;
         }
     }
 </style>
