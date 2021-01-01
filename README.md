@@ -25,4 +25,4 @@ $ npm run generate
 ```
 
 ## Live Preview
-TBA on netlify
+https://glitchcodes.netlify.app/
