@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="navbar--brand">
                     <img src="/logo-navbar.png" alt="GlitchDZN Logo">
-                    GlitchDZN
+                    <span>GlitchDZN</span>
                 </div>
                 <ul class="navbar--links">
                     <li class="navbar--item">
@@ -20,7 +20,7 @@
 <style scoped lang="scss">
 .navbar {
     font-size: 18px;
-    padding: 2rem;
+    padding: 2rem 1rem;
     margin-bottom: 1rem;
     > .container {
         display: flex;
@@ -42,5 +42,9 @@
         list-style: none;
         margin: 0;
     }
+}
+
+@media (max-width: 425px) {
+    .navbar--brand span { display: none; }
 }
 </style>
