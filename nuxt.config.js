@@ -12,7 +12,7 @@ export default {
         ],
         link: [
             { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap' },
+            { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap' },
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
@@ -25,6 +25,7 @@ export default {
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [
+        { src: '~plugins/webfont.js', ssr: false }
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)

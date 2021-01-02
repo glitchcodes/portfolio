@@ -13,7 +13,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "milligram": "^1.4.1",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
