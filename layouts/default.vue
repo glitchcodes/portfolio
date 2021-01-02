@@ -20,7 +20,7 @@
 <style scoped lang="scss">
 .navbar {
     font-size: 18px;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     margin-bottom: 1rem;
     > .container {
         display: flex;
