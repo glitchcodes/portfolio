@@ -12,7 +12,7 @@ export default {
         ],
         link: [
             { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: true },
-            { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap' },
+            { rel: 'stylesheet preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap', crossOrigin: 'anonymous' },
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
