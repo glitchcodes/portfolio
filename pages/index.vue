@@ -17,7 +17,7 @@
                 </div>
             </div>
             <transition name="slide-right" mode="out-in">
-                <div v-if="show" class="column column-34 column-offset-10"></div>
+                <div v-if="show" class="column column-34 column-offset-10" />
             </transition>
         </div>
     </div>
@@ -44,7 +44,7 @@ export default {
     .homepage {
         .row {
             align-items: center;
-            height: calc(100vh - 10rem);
+            height: calc(100vh - 15rem);
         }
         .column {
             height: 45rem;
