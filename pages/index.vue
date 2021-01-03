@@ -34,6 +34,9 @@ export default {
             show: false
         }
     },
+    mounted () {
+        this.show = true
+    },
     head () {
         return {
             title: 'Homepage',
@@ -43,9 +46,6 @@ export default {
                 { hid: 'og:description', property: 'og:description', content: 'Production-ready websites with ease' }
             ]
         }
-    },
-    mounted () {
-        this.show = true
     }
 }
 </script>

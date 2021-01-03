@@ -8,7 +8,7 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'og:image', property: 'og:image', content: '/favicon.ico' }
+            { hid: 'og:image', property: 'og:image', content: 'https://glitchcodes.netlify.app/favicon.ico' }
         ],
         link: [
             { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: true },
