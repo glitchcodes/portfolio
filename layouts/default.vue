@@ -8,14 +8,45 @@
                 </div>
                 <ul class="navbar--links">
                     <li class="navbar--item">
-                        <a class="button button-primary" href="#">Contact Me</a>
+                        <button class="button button-primary" @click="showContact = true">Contact Me</button>
                     </li>
                 </ul>
             </div>
         </div>
         <Nuxt />
+        <modal :show="showContact" @close="showContact = false">
+            <div>
+                <h5>Interested in hiring me?</h5>
+                <p class="subtitle">Contact me in any methods below:</p>
+                <div class="card card-vertical">
+                    <img width="50" src="/discord-logo.svg" alt="Discord Logo">
+                    <div class="card-content">
+                        Glitch#2011
+                    </div>
+                </div>
+                <div class="card card-vertical">
+                    <img width="40" src="/skype-icon.svg" alt="Skype Logo" style="margin: .5rem 14px .5rem .5rem;">
+                    <div class="card-content">
+                        live:binstampos
+                    </div>
+                </div>
+            </div>
+        </modal>
     </div>
 </template>
+
+<script>
+import Modal from '@/components/Modal'
+
+export default {
+    components: { Modal },
+    data () {
+        return {
+            showContact: false
+        }
+    }
+}
+</script>
 
 <style scoped lang="scss">
 .navbar {
@@ -43,7 +74,6 @@
         margin: 0;
     }
 }
-
 @media (max-width: 425px) {
     .navbar--brand span { display: none; }
 }

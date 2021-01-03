@@ -31,6 +31,22 @@ body {
 
 blockquote { border-left: 0.3rem solid $tertiary; }
 
+.subtitle { color: rgb(139, 147, 156); }
+
+// Card
+.card {
+    margin-bottom: 1rem;
+    &.card-vertical {
+        display: flex;
+        align-items: center;
+        background: darken($secondary, 5%);
+        padding: 1rem;
+        border-radius: 1rem;
+        img { margin-right: 10px; }
+    }
+    img { vertical-align: middle; }
+}
+
 // Transition
 .slide-right-enter-active,
 .slide-right-leave-active {
