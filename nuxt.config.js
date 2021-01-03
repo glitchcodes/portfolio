@@ -4,11 +4,11 @@ export default {
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: 'Glitch | Personal Portfolio',
+        titleTemplate: '%s | GlitchDZN',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Production-ready websites with ease' }
+            { hid: 'og:image', name: 'og:image', content: '/favicon.ico' }
         ],
         link: [
             { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: true },
