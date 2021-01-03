@@ -39,8 +39,8 @@ export default {
             title: 'Homepage',
             meta: [
                 { hid: 'description', name: 'description', content: 'Production-ready websites with ease' },
-                { hid: 'og:title', name: 'og:title', content: 'Homepage - GlitchDZN' },
-                { hid: 'og:description', name: 'og:description', content: 'Production-ready websites with ease' }
+                { hid: 'og:title', property: 'og:title', content: 'Homepage - GlitchDZN' },
+                { hid: 'og:description', property: 'og:description', content: 'Production-ready websites with ease' }
             ]
         }
     },
