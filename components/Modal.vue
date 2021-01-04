@@ -49,11 +49,11 @@ export default {
         transition: opacity .3s ease;
     }
     .modal--container {
-        width: 300px;
         margin: 40px auto 0;
         padding: 20px 30px;
         background-color: rgb(14, 19, 31);
-        border-radius: 2px;
+        border: 1px solid rgb(56, 64, 95);
+        border-radius: 1rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
         transition: all .3s ease;
     }

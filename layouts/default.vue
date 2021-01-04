@@ -8,7 +8,7 @@
                 </div>
                 <ul class="navbar--links">
                     <li class="navbar--item">
-                        <button class="button button-primary" @click="showContact = true">Contact Me</button>
+                        <a href="#" class="button button-primary" @click="showContact = true">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -16,19 +16,25 @@
         <Nuxt />
         <modal :show="showContact" @close="showContact = false">
             <div>
-                <h5>Interested in hiring me?</h5>
+                <h5>Interested?</h5>
                 <p class="subtitle">Contact me in any methods below:</p>
-                <div class="card card-vertical">
+                <div class="card card-vertical" @click="copyContact('discord-contact')">
                     <img width="50" src="/discord-logo.svg" alt="Discord Logo">
-                    <div class="card-content">
-                        Glitch#2011
-                    </div>
+                    <transition name="fade" mode="out-in">
+                        <div :key="discord" class="card-content">
+                            {{ discord }}
+                        </div>
+                    </transition>
+                    <input id="discord-contact" type="hidden" value="Glitch#2011">
                 </div>
-                <div class="card card-vertical">
+                <div class="card card-vertical" @click="copyContact('skype-contact')">
                     <img width="40" src="/skype-icon.svg" alt="Skype Logo" style="margin: .5rem 14px .5rem .5rem;">
-                    <div class="card-content">
-                        live:binstampos
-                    </div>
+                    <transition name="fade" mode="out-in">
+                        <div :key="skype" class="card-content">
+                            {{ skype }}
+                        </div>
+                    </transition>
+                    <input id="skype-contact" type="hidden" value="live:binstampos">
                 </div>
             </div>
         </modal>
@@ -42,7 +48,36 @@ export default {
     components: { Modal },
     data () {
         return {
-            showContact: false
+            showContact: false,
+            discord: 'Glitch#2011',
+            skype: 'live:binstampos'
+        }
+    },
+    methods: {
+        copyContact (value) {
+            const text = document.querySelector('#' + value)
+            text.setAttribute('type', 'text')
+            text.select()
+
+            try {
+                document.execCommand('copy')
+                if (value === 'discord-contact') {
+                    this.discord = 'Copied to clipboard!'
+                    setTimeout(() => {
+                        this.discord = 'Glitch#2011'
+                    }, 3000)
+                } else if (value === 'skype-contact') {
+                    this.skype = 'Copied to clipboard!'
+                    setTimeout(() => {
+                        this.skype = 'live:binstampos'
+                    }, 3000)
+                }
+            } catch (err) {
+                alert('Cannot copy to clipboard')
+            }
+
+            text.setAttribute('type', 'hidden')
+            window.getSelection().removeAllRanges()
         }
     }
 }

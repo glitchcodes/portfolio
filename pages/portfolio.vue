@@ -1,6 +1,11 @@
 <template>
     <div class="container">
-        Hello
+        <div class="hero">
+            <div class="container">
+                <h3>Portfolio</h3>
+                <p class="subtitle">All of my works are listed here</p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -22,6 +27,11 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.hero {
+    background: rgb(56, 64, 95);
+    padding: 10rem 2rem;
+    border-radius: 1rem;
+    p { margin-bottom: 0; }
+}
 </style>
