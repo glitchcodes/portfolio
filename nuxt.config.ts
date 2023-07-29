@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     },
     css: [
         '~/assets/css/main.scss',
-        'milligram'
+        'milligram',
+        '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     modules: [
         '@nuxtjs/google-fonts'

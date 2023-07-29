@@ -8,8 +8,8 @@
                     <blockquote>
                         <p>
                             <em>
-                                Hello! I'm a freelance website developer and an I.T student. Experienced developer on Laravel
-                                and VueJs. Passionate to learn more technologies
+                                Hello! I'm a {{ myAge }}-year old fullstack web developer based on Philippines. Experienced developer on Laravel
+                                and VueJs. Currently pursuing Information Technology as my studies on college.
                             </em>
                         </p>
                     </blockquote>
@@ -17,23 +17,27 @@
                 </div>
             </div>
 
-            <Transition name="slide-right" mode="out-in">
-                <div class="column column-34 column-offset-10">
-                    <div class="icon vue" data-value="-2">
-                        <img src="/vuejs-logo.svg" alt="Vue.js Logo" />
-                    </div>
-                    <div class="icon laravel" data-value="5">
-                        <img src="/laravel-logo.svg" alt="Laravel Logo" />
-                    </div>
-                    <div class="icon php" data-value="1">
-                        <img src="/php-logo.svg" alt="PHP Logo" />
-                    </div>
-                    <div class="icon nuxt" data-value="1">
-                        <img src="/nuxt-logo.png" alt="Nuxt Logo" />
-                    </div>
+            <div class="column column-34 column-offset-10">
+                <div class="icon vue" data-value="-2">
+                    <img src="/vuejs-logo.svg" alt="Vue.js Logo" />
                 </div>
-            </Transition>
+                <div class="icon laravel" data-value="5">
+                    <img src="/laravel-logo.svg" alt="Laravel Logo" />
+                </div>
+                <div class="icon php" data-value="1">
+                    <img src="/php-logo.svg" alt="PHP Logo" />
+                </div>
+                <div class="icon nuxt" data-value="1">
+                    <img src="/nuxt-logo.png" alt="Nuxt Logo" />
+                </div>
+            </div>
+        </div>
 
+        <div class="flex justify-content-center">
+            <div class="more-info">
+                <span>More Info</span>
+                <font-awesome-icon :icon="['fas', 'arrow-down']" />
+            </div>
         </div>
     </div>
 </template>
@@ -47,6 +51,12 @@ useHead({
         { property: 'og:description', content: 'Production-ready websites with ease' }
     ]
 });
+
+// Calculate my age
+const myAge = computed(() => {
+    return Math.floor((new Date().valueOf() - new Date("2002-09-11").getTime()) / 3.15576e+10);
+})
+
 </script>
 
 <style lang="scss" scoped>
@@ -106,6 +116,17 @@ useHead({
         &.nuxt {
             animation-name: onLoadNuxtAnimation;
             transform: translate(-5%, 115%);
+        }
+    }
+    .more-info {
+        border: 2px solid $primary;
+        border-radius: 20px;
+        padding: 0.5rem 1.5rem;
+        &:hover {
+            cursor: pointer;
+        }
+        span {
+            margin-right: 1rem;
         }
     }
 }

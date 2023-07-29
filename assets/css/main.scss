@@ -60,6 +60,15 @@ blockquote { border-left: 0.3rem solid $tertiary!important; }
   img { vertical-align: middle; }
 }
 
+// Flex
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
 // Transition
 .slide-right-enter-active,
 .slide-right-leave-active {
