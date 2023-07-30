@@ -36,7 +36,9 @@
         <div class="flex justify-content-center">
             <div class="more-info">
                 <span>More Info</span>
-                <font-awesome-icon :icon="['fas', 'arrow-down']" />
+                <client-only>
+                    <font-awesome-icon :icon="['fas', 'arrow-down']" />
+                </client-only>
             </div>
         </div>
     </div>

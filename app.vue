@@ -93,7 +93,6 @@ const copyToClipboard = (type: string) => {
 .navbar {
   font-size: 18px;
   padding: 2rem 0;
-  margin-bottom: 1rem;
   > .container {
     display: flex;
     align-items: center;
