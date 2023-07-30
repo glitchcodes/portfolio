@@ -108,39 +108,40 @@ useHead({
 
 <style lang="scss" scoped>
 .hero {
-  background: rgb(56, 64, 95);
-  padding: 10rem 2rem;
-  border-radius: 1rem;
-  p { margin-bottom: 0; }
+    background: rgb(56, 64, 95);
+    padding: 10rem 2rem;
+    border-radius: 1rem;
+    p { margin-bottom: 0; }
 }
 
 .card {
-  background: darken($primary, 10%);
-  border-radius: 8px;
-  .card-preview {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  .card-body {
-    padding: 1em;
-    h5 {
-      font-weight: bold;
-      margin-bottom: 0;
+    background: darken($primary, 10%);
+    border-radius: 8px;
+    .card-preview {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
-  }
+    .card-body {
+        padding: 1em;
+        h5 {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
 
-  .badges {
-    margin-bottom: 2rem;
-    .badge {
-      background-color: $tertiary;
-      border-radius: 15px;
-      font-size: 12px;
-      padding: 4px 10px;
-      margin-right: 5px;
-      &:last-child {
-        margin-right: 0;
-      }
+    .badges {
+        margin-bottom: 2rem;
+        .badge {
+            background-color: $tertiary;
+            border-radius: 15px;
+            display: inline-block;
+            font-size: 10px;
+            padding: 4px 10px;
+            margin-right: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
-  }
 }
 </style>

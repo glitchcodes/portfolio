@@ -29,7 +29,7 @@
             <div class="card card-vertical" @click="copyToClipboard('discord')">
                 <img width="50" src="/discord-logo.svg" alt="Discord Logo">
                 <div class="card-content">
-                    <transition name="fade">
+                    <transition name="fade" mode="out-in">
                         <span v-if="!isDiscordCopied">glitchzyu</span>
                         <span v-else>Copied to clipboard!</span>
                     </transition>
