@@ -47,10 +47,15 @@ const closeModal = () => {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 @media (max-width: 425px) {
-  .modal--container { width: 300px; }
+  .modal--container { width: 90vw; }
 }
 
 @media (min-width: 426px) {

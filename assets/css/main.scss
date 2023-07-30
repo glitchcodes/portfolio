@@ -58,6 +58,9 @@ blockquote { border-left: 0.3rem solid $tertiary!important; }
     img { margin-right: 10px; }
   }
   img { vertical-align: middle; }
+  .card-content {
+    overflow: hidden;
+  }
 }
 
 // Flex
