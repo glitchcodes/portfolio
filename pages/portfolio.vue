@@ -3,10 +3,10 @@
         <div class="hero">
             <div class="container">
                 <h3>Portfolio</h3>
-                <p class="subtitle">
+                <p>
                     All of my works are listed here
                 </p>
-                <nuxt-link to="/" class="button button-primary" style="margin-top: 2.5rem">
+                <nuxt-link to="/" class="button button-secondary" style="margin-top: 2.5rem">
                     Return to homepage
                 </nuxt-link>
             </div>
@@ -126,9 +126,12 @@ const fetchBG = (image: string) => {
 
 <style lang="scss" scoped>
 .hero {
-    background: rgb(56, 64, 95);
+    background-color: #06d6a0;
+    background-image: url(/hero.png);
+    background-size: cover;
     padding: 10rem 2rem;
     border-radius: 1rem;
+    font-weight: 600;
     p { margin-bottom: 0; }
 }
 
