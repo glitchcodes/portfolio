@@ -25,6 +25,11 @@ body {
   background: $secondary!important;
   color: $text-primary!important;
 }
+
+.container {
+  max-width: 130rem!important;
+}
+
 .button {
   border: 0!important;
   transition: 0.3s;

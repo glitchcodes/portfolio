@@ -24,7 +24,8 @@ export default defineNuxtConfig({
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     modules: [
-        '@nuxtjs/google-fonts'
+        '@nuxtjs/google-fonts',
+        '@nuxtjs/supabase'
     ],
     googleFonts: {
         display: 'swap',
