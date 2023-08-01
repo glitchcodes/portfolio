@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row" style="margin-top: 2rem;">
-            <div class="column column-md-50" v-for="item in works" :key="item.slug">
+            <div class="column" v-for="item in works" :key="item.slug">
                 <div class="portfolio-item">
                     <img :src="fetchBG(item.background)" :alt="item.name" />
                     <p style="font-size: 2rem;">{{ item.name }}</p>
@@ -102,6 +102,8 @@
 </template>
 
 <script lang="ts" setup>
+import { Database } from "~/types/database";
+
 useHead({
     title: 'Portfolio',
     meta: [
@@ -112,13 +114,13 @@ useHead({
 })
 
 // Supabase client
-const client = useSupabaseClient();
+const client = useSupabaseClient<Database>();
 
-// Fetch porfolio items
-const { data: works } = await useFetch('/api/works');
+// Fetch portfolio items
+const { pending, data: works } = useLazyFetch('/api/works');
 
-const fetchBG = (image: string) => {
-    const { data } = client.storage.from('portfolio').getPublicUrl(image);
+const fetchBG = (image: string | null) => {
+    const { data } = client.storage.from('portfolio').getPublicUrl(image!);
 
     return data.publicUrl
 }
@@ -171,5 +173,14 @@ const fetchBG = (image: string) => {
     img {
         border-radius: 1rem;
     }
+}
+
+@media (min-width: 40.0rem) {
+  .row {
+    flex-wrap: wrap;
+    .column {
+      width: calc(50% - 1rem)!important;
+    }
+  }
 }
 </style>
