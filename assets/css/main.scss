@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  max-width: 130rem!important;
+  max-width: 120rem!important;
 }
 
 .button {
@@ -45,6 +45,11 @@ body {
       background: darken($primary, 5%);
     }
   }
+}
+
+svg {
+  position: relative;
+  top: 1px;
 }
 
 blockquote { border-left: 0.3rem solid $tertiary!important; }

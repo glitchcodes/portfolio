@@ -9,6 +9,24 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      work_screenshots: {
+        Row: {
+          id: number
+          image: string
+          work_id: number
+        }
+        Insert: {
+          id?: number
+          image: string
+          work_id: number
+        }
+        Update: {
+          id?: number
+          image?: string
+          work_id?: number
+        }
+        Relationships: []
+      }
       works: {
         Row: {
           background: string | null
@@ -16,6 +34,7 @@ export interface Database {
           description: string | null
           id: number
           name: string
+          services: string | null
           slug: string
         }
         Insert: {
@@ -24,6 +43,7 @@ export interface Database {
           description?: string | null
           id?: number
           name: string
+          services?: string | null
           slug: string
         }
         Update: {
@@ -32,6 +52,7 @@ export interface Database {
           description?: string | null
           id?: number
           name?: string
+          services?: string | null
           slug?: string
         }
         Relationships: []

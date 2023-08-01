@@ -7,16 +7,19 @@
                     All of my works are listed here
                 </p>
                 <nuxt-link to="/" class="button button-secondary" style="margin-top: 2.5rem">
-                    Return to homepage
+                    <client-only>
+                        <font-awesome-icon :icon="['fas', 'arrow-left']" />
+                    </client-only>
+                    <span style="margin-left: 1rem;">Return to homepage</span>
                 </nuxt-link>
             </div>
         </div>
         <div class="row" style="margin-top: 2rem;">
             <div class="column" v-for="item in works" :key="item.slug">
-                <div class="portfolio-item">
+                <nuxt-link :to="'/portfolio/' + item.slug" class="portfolio-item">
                     <img :src="fetchBG(item.background)" :alt="item.name" />
                     <p style="font-size: 2rem;">{{ item.name }}</p>
-                </div>
+                </nuxt-link>
             </div>
 <!--            <div class="column">-->
 <!--                <div class="card">-->
@@ -172,6 +175,9 @@ const fetchBG = (image: string | null) => {
     width: 100%;
     img {
         border-radius: 1rem;
+    }
+    p {
+        color: white;
     }
 }
 
