@@ -134,22 +134,6 @@ const { pending, data: works } = useLazyFetch('/api/works');
     p { margin-bottom: 0; }
 }
 
-.card {
-    background: darken($primary, 10%);
-    border-radius: 8px;
-    .card-preview {
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-    .card-body {
-        padding: 1em;
-        h5 {
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-    }
-}
-
 .badges {
     margin-bottom: 2rem;
     .badge {
@@ -179,12 +163,4 @@ const { pending, data: works } = useLazyFetch('/api/works');
     }
 }
 
-@media (min-width: 40.0rem) {
-  .row {
-    flex-wrap: wrap;
-    .column {
-      width: calc(50% - 1rem)!important;
-    }
-  }
-}
 </style>

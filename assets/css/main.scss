@@ -116,3 +116,14 @@ blockquote { border-left: 0.3rem solid $tertiary!important; }
   transition: all .1s ease-out;
   opacity: 0;
 }
+
+@media (min-width: 40.0rem) {
+  .row {
+    flex-wrap: wrap;
+    .column {
+      flex-basis: 50%!important;
+      flex-grow: 0!important;
+      padding: 1rem!important;
+    }
+  }
+}

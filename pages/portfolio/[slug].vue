@@ -26,24 +26,40 @@
               {{ work!.services }}
           </div>
       </div>
+      <!-- Testimonials -->
+      <h3 v-if="work.work_testimonials.length > 0" style="margin: 4rem 0;">Testimonials</h3>
 
-      <h3 style="margin: 4rem 0;">Screenshots</h3>
+      <div class="testimonials row">
+          <div class="column">
+              <div class="card" v-for="testimony in work.work_testimonials" :key="`testimony-${ testimony.id }`">
+                  <p style="font-style: italic">"{{ testimony.testimony }}"</p>
 
-      <div class="screenshots row">
+                  <p class="subtitle" style="margin-bottom: 0">
+                      {{ testimony.reviewer }}
+                      <br>
+                      {{ testimony.reviewer_role }}
+                  </p>
+              </div>
+          </div>
+      </div>
+      <!-- Testimonials -->
+
+      <!-- Screenshots -->
+      <h3 v-if="work.work_screenshots.length > 0" style="margin: 4rem 0;">Screenshots</h3>
+
+      <div v-if="work.work_screenshots.length > 0" class="screenshots row">
           <div class="column" v-for="screenshot in work!.work_screenshots" :key="work!.image">
               <div class="portfolio-item">
                   <img :src="screenshot.image" :alt="work!.name" />
               </div>
           </div>
       </div>
+      <!-- Screenshots -->
   </div>
 </template>
 
 <script setup lang="ts">
-    import { Database } from "~/types/database";
-
     const route = useRoute();
-    const client = useSupabaseClient<Database>()
 
     // Fetch item
     const { data: work } = await useFetch(`/api/works/${route.params.slug}`);
@@ -68,12 +84,20 @@
         color: white;
     }
 }
-@media (min-width: 40.0rem) {
-    .screenshots.row {
-        flex-wrap: wrap;
-        .column {
-            width: calc(50% - 1rem)!important;
-            padding: 1rem;
+
+.card {
+    background: darken($primary, 10%);
+    border-radius: 1rem;
+    padding: 3rem;
+    .card-preview {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .card-body {
+        padding: 1em;
+        h5 {
+            font-weight: bold;
+            margin-bottom: 0;
         }
     }
 }
