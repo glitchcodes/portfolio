@@ -169,6 +169,10 @@ const { pending, data: works } = useLazyFetch('/api/works');
     width: 100%;
     img {
         border-radius: 1rem;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.01);
+        }
     }
     p {
         color: white;
