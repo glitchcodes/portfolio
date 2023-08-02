@@ -32,7 +32,7 @@
       <div class="screenshots row">
           <div class="column" v-for="screenshot in work!.work_screenshots" :key="work!.image">
               <div class="portfolio-item">
-                  <img :src="fetchScreenshot(screenshot.image)" :alt="work!.name" />
+                  <img :src="screenshot.image" :alt="work!.name" />
               </div>
           </div>
       </div>
@@ -47,12 +47,6 @@
 
     // Fetch item
     const { data: work } = await useFetch(`/api/works/${route.params.slug}`);
-
-    const fetchScreenshot = (image: string | null) => {
-        const { data } = client.storage.from('portfolio').getPublicUrl(image!);
-
-        return data.publicUrl
-    }
 
     useHead({
         title: work.value!.name,

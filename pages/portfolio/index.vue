@@ -17,7 +17,7 @@
         <div class="row" style="margin-top: 2rem;">
             <div class="column" v-for="item in works" :key="item.slug">
                 <nuxt-link :to="'/portfolio/' + item.slug" class="portfolio-item">
-                    <img :src="fetchBG(item.background)" :alt="item.name" />
+                    <img :src="item.background" :alt="item.name" />
                     <p style="font-size: 2rem;">{{ item.name }}</p>
                 </nuxt-link>
             </div>
@@ -121,12 +121,6 @@ const client = useSupabaseClient<Database>();
 
 // Fetch portfolio items
 const { pending, data: works } = useLazyFetch('/api/works');
-
-const fetchBG = (image: string | null) => {
-    const { data } = client.storage.from('portfolio').getPublicUrl(image!);
-
-    return data.publicUrl
-}
 </script>
 
 <style lang="scss" scoped>
