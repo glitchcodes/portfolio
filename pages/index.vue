@@ -65,7 +65,7 @@ const myAge = computed(() => {
 .homepage {
     .row {
         align-items: center;
-        height: calc(100vh - 15rem);
+        height: calc(100vh - 20rem);
     }
     .column {
         height: 45rem;
@@ -124,6 +124,7 @@ const myAge = computed(() => {
         border: 2px solid $primary;
         border-radius: 20px;
         padding: 0.5rem 1.5rem;
+        margin-bottom: 3.5rem;
         &:hover {
             cursor: pointer;
         }
@@ -132,6 +133,13 @@ const myAge = computed(() => {
         }
     }
 }
+
+@media (min-width: 40.0rem) {
+    .homepage .row {
+        height: calc(100vh - 15rem);
+    }
+}
+
 @media (max-width: 639px) {
     .homepage .column:nth-child(2) {
         display: none;
