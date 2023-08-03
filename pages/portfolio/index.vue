@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="row" style="margin-top: 2rem;">
-            <div class="column" v-for="item in works" :key="item.slug">
+            <div class="column column-50" v-for="item in works" :key="item.slug">
                 <nuxt-link :to="'/portfolio/' + item.slug" class="portfolio-item">
                     <img :src="item.background" :alt="item.name" />
                     <p style="font-size: 2rem;">{{ item.name }}</p>

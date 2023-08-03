@@ -30,7 +30,7 @@
       <h3 v-if="work.work_testimonials.length > 0" style="margin: 4rem 0;">Testimonials</h3>
 
       <div class="testimonials row">
-          <div class="column">
+          <div class="column  column-50">
               <div class="card" v-for="testimony in work.work_testimonials" :key="`testimony-${ testimony.id }`">
                   <p style="font-style: italic">"{{ testimony.testimony }}"</p>
 
@@ -48,7 +48,7 @@
       <h3 v-if="work.work_screenshots.length > 0" style="margin: 4rem 0;">Screenshots</h3>
 
       <div v-if="work.work_screenshots.length > 0" class="screenshots row">
-          <div class="column" v-for="screenshot in work!.work_screenshots" :key="work!.image">
+          <div class="column column-50" v-for="screenshot in work!.work_screenshots" :key="work!.image">
               <div class="portfolio-item">
                   <img :src="screenshot.image" :alt="work!.name" />
               </div>
