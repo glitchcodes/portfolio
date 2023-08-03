@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
     const { data, error } = await client.from('works')
         .select('slug, name, background')
         .eq('is_hidden', false)
-        .order('created_at')
+        .order('id')
 
     if (error) {
         throw createError({ statusMessage: error.message })
