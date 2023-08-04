@@ -1,6 +1,6 @@
 <template>
-    <div class="homepage container">
-        <div class="row">
+    <div class="container">
+        <div class="landing row">
             <div class="column">
                 <div>
                     <h3 class="lead">Vincent Tampos</h3>
@@ -34,11 +34,58 @@
         </div>
 
         <div class="flex justify-content-center">
-            <div class="more-info">
+            <a class="more-info" href="#about-me">
                 <span>More Info</span>
                 <client-only>
                     <font-awesome-icon :icon="['fas', 'arrow-down']" />
                 </client-only>
+            </a>
+        </div>
+
+        <h2 style="margin-bottom: 4rem;" id="about-me">About me</h2>
+
+        <div class="row" style="align-items: center">
+            <div class="column" style="padding-right: 3rem!important;">
+                <div class="flex" style="margin-bottom: 2rem;">
+                    <div class="icon">
+                        <img src="/vuejs-logo.svg" alt="Vue.js Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/nuxt-logo.png" alt="Nuxt Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/php-logo.svg" alt="PHP Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/laravel-logo.svg" alt="Laravel Logo" />
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="icon">
+                        <img src="/javascript-logo.svg" alt="Javascript Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/linux-logo.svg" alt="Linux Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/MySQL-logo.svg" alt="MySQL Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/supabase-logo.webp" alt="Supabase Logo" />
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <p>
+                    I really liked building stuff that interests me. I was into creating small game servers so that led
+                    me to learn more about computers and because of that, I learned on how to manage server resources,
+                    manage databases, and use cloud solutions such as OVHCloud for VPS and Azure.
+                </p>
+                <p style="margin-bottom: 0;">
+                    Eventually that to led me to learn programming which I really enjoyed more. I am now taking
+                    Information Technology as my college course to learn more about management and to improve my tech
+                    stack.
+                </p>
             </div>
         </div>
     </div>
@@ -62,8 +109,8 @@ const myAge = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.homepage {
-    .row {
+.landing {
+    &.row {
         align-items: center;
         height: calc(100vh - 20rem);
     }
@@ -83,25 +130,15 @@ const myAge = computed(() => {
         }
     }
     .icon {
-        background-color: $primary;
-        border-radius: 5px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        display: inline-block;
-        line-height: 0;
-        padding: 10px;
-        transition: 0.3s;
         animation-duration: 0.8s;
         animation-timing-function: ease-in-out;
+        transition: 0.3s;
 
         position: absolute;
         top: 50%;
         left: 50%;
         &:hover {
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        }
-        img {
-            width: 70px;
-            height: 70px;
         }
         &.vue {
             animation-name: onLoadVueAnimation;
@@ -120,28 +157,46 @@ const myAge = computed(() => {
             transform: translate(-5%, 115%);
         }
     }
-    .more-info {
-        border: 2px solid $primary;
-        border-radius: 20px;
-        padding: 0.5rem 1.5rem;
-        margin-bottom: 3.5rem;
-        &:hover {
-            cursor: pointer;
-        }
-        span {
-            margin-right: 1rem;
-        }
+}
+
+.flex {
+    justify-content: space-between;
+}
+
+.icon img {
+    background-color: $primary;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    line-height: 0;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+
+.more-info {
+    color: white;
+    border: 2px solid $primary;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3.5rem;
+    &:hover {
+        cursor: pointer;
+    }
+    span {
+        margin-right: 1rem;
     }
 }
 
 @media (min-width: 40.0rem) {
-    .homepage .row {
+    .landing.row {
         height: calc(100vh - 15rem);
     }
 }
 
 @media (max-width: 639px) {
-    .homepage .column:nth-child(2) {
+    .landing .column:nth-child(2) {
         display: none;
     }
 }

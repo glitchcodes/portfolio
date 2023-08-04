@@ -19,6 +19,17 @@
 
     <NuxtPage />
 
+    <div class="container" style="margin-top: 4rem;">
+        <footer>
+            <span>
+                GlitchDZN &copy; {{ currentYear }}
+            </span>
+            <span class="float-right">
+                This website is <a href="https://github.com/glitchcodes/portfolio" target="_blank">open-source</a>
+            </span>
+        </footer>
+    </div>
+
     <Transition name="fade">
         <Modal v-if="showContact" id="contact-modal" @close-modal="toggleContact(false)">
             <h5>Interested?</h5>
@@ -56,6 +67,8 @@
 const showContact = ref(false);
 const isDiscordCopied = ref(false);
 const isEmailCopied = ref(false);
+
+const currentYear = ref(new Date().getFullYear())
 
 const toggleContact = (type: boolean) => {
     showContact.value = type;
