@@ -3,10 +3,10 @@
     <nav class="navbar">
         <div class="container">
 
-            <div class="navbar--brand">
+            <nuxt-link to="/" class="navbar--brand">
                 <img src="/logo-navbar.png" alt="GlitchDZN Logo">
                 <span>GlitchDZN</span>
-            </div>
+            </nuxt-link>
 
             <ul class="navbar--links">
                 <li class="navbar--item">

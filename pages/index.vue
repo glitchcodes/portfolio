@@ -46,7 +46,7 @@
 
         <div class="row" style="align-items: center">
             <div class="column" style="padding-right: 3rem!important;">
-                <div class="flex" style="margin-bottom: 2rem;">
+                <div class="flex">
                     <div class="icon">
                         <img src="/vuejs-logo.svg" alt="Vue.js Logo" />
                     </div>
@@ -60,9 +60,12 @@
                         <img src="/laravel-logo.svg" alt="Laravel Logo" />
                     </div>
                 </div>
-                <div class="flex">
+                <div class="flex" style="margin: 2rem 0;">
                     <div class="icon">
                         <img src="/javascript-logo.svg" alt="Javascript Logo" />
+                    </div>
+                    <div class="icon">
+                        <img src="/typescript-logo.svg" alt="Typescript Logo" />
                     </div>
                     <div class="icon">
                         <img src="/linux-logo.svg" alt="Linux Logo" />
@@ -70,9 +73,9 @@
                     <div class="icon">
                         <img src="/MySQL-logo.svg" alt="MySQL Logo" />
                     </div>
-                    <div class="icon">
-                        <img src="/supabase-logo.webp" alt="Supabase Logo" />
-                    </div>
+                </div>
+                <div class="icon">
+                    <img src="/supabase-logo.webp" alt="Supabase Logo" />
                 </div>
             </div>
             <div class="column">

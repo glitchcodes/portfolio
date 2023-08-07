@@ -34,6 +34,13 @@ body {
   max-width: 120rem!important;
 }
 
+.navbar--brand {
+  color: white;
+  &:hover, &:focus {
+    color: #dfdfdf;
+  }
+}
+
 .button {
   border: 0!important;
   transition: 0.3s;
