@@ -17,89 +17,13 @@
         <div class="row" style="margin-top: 2rem;">
             <div class="column" v-for="item in works" :key="item.slug">
                 <nuxt-link :to="'/portfolio/' + item.slug" class="portfolio-item">
-                    <img :src="item.background" :alt="item.name" />
+                    <picture>
+                        <source type="image/webp" :srcset="item.background + '.webp'">
+                        <img :src="item.background + '.png'" :alt="item.name" />
+                    </picture>
                     <p style="font-size: 2rem;">{{ item.name }}</p>
                 </nuxt-link>
             </div>
-<!--            <div class="column">-->
-<!--                <div class="card">-->
-<!--                    <img src="/usercord-1.png" alt="Usercord" class="card-preview" />-->
-
-<!--                    <div class="card-body">-->
-<!--                        <h5>Usercord</h5>-->
-
-<!--                        <div class="badges">-->
-<!--                            <span class="badge">Vue.js</span>-->
-<!--                            <span class="badge">Laravel</span>-->
-<!--                            <span class="badge">MySQL</span>-->
-<!--                            <span class="badge">Websockets</span>-->
-<!--                        </div>-->
-
-<!--                        <p>-->
-<!--                            A social media website integrated with Discord features.-->
-<!--                        </p>-->
-
-<!--                        <p>-->
-<!--                            Features a timeline, profiles, messaging system,-->
-<!--                            post/poll creation, following/follow system, and settings.-->
-<!--                        </p>-->
-
-<!--                        <p>-->
-<!--                            Can automatically display user's joined Discord servers and detect activity presence.-->
-<!--                        </p>-->
-
-<!--                        <a class="button button-secondary" style="margin-bottom: 0;" target="_blank" href="https://github.com/glitchcodes/Swesence">-->
-<!--                            View Screenshots-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="column">-->
-<!--                <div class="card">-->
-<!--                    <img src="/swesence.png" alt="Swesence" class="card-preview" />-->
-
-<!--                    <div class="card-body">-->
-<!--                        <h5>Swesence</h5>-->
-
-<!--                        <div class="badges">-->
-<!--                            <span class="badge">Vue.js</span>-->
-<!--                            <span class="badge">Electron.js</span>-->
-<!--                            <span class="badge">Element-Plus</span>-->
-<!--                        </div>-->
-
-<!--                        <p>-->
-<!--                            A small hobby project that updates the person's Discord activity to any of the selected Nintendo Switch game.-->
-<!--                        </p>-->
-
-<!--                        <a class="button button-secondary" style="margin-bottom: 0;" target="_blank" href="https://github.com/glitchcodes/Swesence">-->
-<!--                            View on Github-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="column">-->
-<!--                <div class="card">-->
-<!--                    <img src="/discord-marketplace.png" alt="Discord Marketplace" class="card-preview" />-->
-
-<!--                    <div class="card-body">-->
-<!--                        <h5>Discord Marketplace</h5>-->
-
-<!--                        <div class="badges">-->
-<!--                            <span class="badge">Vue.js</span>-->
-<!--                            <span class="badge">Laravel</span>-->
-<!--                            <span class="badge">MariaDB</span>-->
-<!--                        </div>-->
-
-<!--                        <p>-->
-<!--                            A marketplace that is aimed for users to offer their services. Targeted for Discord audience.-->
-<!--                        </p>-->
-
-<!--                        <a class="button button-secondary" style="margin-bottom: 0;" target="_blank" href="https://web.archive.org/web/20200704205042/http://discordmarketplace.com/">-->
-<!--                            View on Archive.org-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
     </div>
 </template>
