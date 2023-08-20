@@ -117,14 +117,33 @@ blockquote { border-left: 0.3rem solid var(--bg-tertiary)!important; }
   display: flex;
 }
 
+.align-items-center {
+  align-items: center;
+}
+
 .justify-content-center {
   justify-content: center!important;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
 
 // Footer
 footer {
   border-top: 1px solid var(--bg-primary-alt);
   padding: 3rem 0;
+
+  a {
+    color: var(--bg-tertiary);
+  }
+
+  .icon-links a {
+    color: white;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 }
 
 // Transition

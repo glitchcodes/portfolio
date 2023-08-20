@@ -21,12 +21,17 @@
 
     <div class="container" style="margin-top: 4rem;">
         <footer>
-            <span>
-                GlitchDZN &copy; {{ currentYear }}
-            </span>
-            <span class="float-right">
-                This website is <a href="https://github.com/glitchcodes/portfolio" target="_blank">open-source</a>
-            </span>
+            <div class="flex align-items-center justify-content-between">
+                <div>
+                    <p style="margin-bottom: 0;">GlitchDZN &copy; {{ currentYear }}</p>
+                    <p style="margin-bottom: 0;">This website is <a href="https://github.com/glitchcodes/portfolio" target="_blank">open-source</a></p>
+                </div>
+                <div class="icon-links">
+                    <a href="https://github.com/glitchcodes" target="_blank">
+                        <font-awesome-icon :icon="['fab', 'github']" />
+                    </a>
+                </div>
+            </div>
         </footer>
     </div>
 

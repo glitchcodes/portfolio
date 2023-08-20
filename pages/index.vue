@@ -45,7 +45,7 @@
         <h2 style="margin-bottom: 4rem;" id="about-me">About me</h2>
 
         <div class="row" style="align-items: center">
-            <div class="column" style="padding-right: 3rem!important;">
+            <div class="tech-stack column">
                 <div class="flex">
                     <div class="icon">
                         <img src="/vuejs-logo.svg" alt="Vue.js Logo" />
@@ -177,6 +177,10 @@ const myAge = computed(() => {
     height: 70px;
 }
 
+.tech-stack {
+    margin-bottom: 3rem;
+}
+
 .more-info {
     color: var(--text-primary);
     border: 2px solid var(--bg-primary);
@@ -194,6 +198,10 @@ const myAge = computed(() => {
 @media (min-width: 40.0rem) {
     .landing.row {
         height: calc(100vh - 15rem);
+    }
+    .tech-stack {
+        padding-right: 3rem!important;
+        margin-bottom: 0;
     }
 }
 
