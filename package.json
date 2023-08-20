@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/supabase": "^0.3.8",
     "nuxt": "^3.6.5",

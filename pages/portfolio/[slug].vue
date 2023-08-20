@@ -89,7 +89,8 @@
 }
 
 .card {
-    background: darken($primary, 10%);
+    background: var(--bg-secondary-alt);
+    border: 1px solid #d4d4d8;
     border-radius: 1rem;
     padding: 3rem;
     .card-preview {
@@ -103,5 +104,13 @@
             margin-bottom: 0;
         }
     }
+    p {
+        color: var(--text-primary);
+    }
+}
+
+.dark-mode .card {
+    background: var(--bg-primary-alt);
+    border-color: #3f3f46;
 }
 </style>

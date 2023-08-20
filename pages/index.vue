@@ -167,7 +167,7 @@ const myAge = computed(() => {
 }
 
 .icon img {
-    background-color: $primary;
+    background-color: var(--bg-primary);
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     display: inline-block;
@@ -177,10 +177,9 @@ const myAge = computed(() => {
     height: 70px;
 }
 
-
 .more-info {
-    color: white;
-    border: 2px solid $primary;
+    color: var(--text-primary);
+    border: 2px solid var(--bg-primary);
     border-radius: 20px;
     padding: 0.5rem 1.5rem;
     margin-bottom: 3.5rem;

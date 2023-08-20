@@ -49,7 +49,7 @@ const { pending, data: works } = useLazyFetch('/api/works');
 
 <style lang="scss" scoped>
 .hero {
-    background-color: #06d6a0;
+    background-color: var(--bg-tertiary);
     background-image: url(/hero.png);
     background-size: cover;
     padding: 10rem 2rem;
@@ -61,7 +61,7 @@ const { pending, data: works } = useLazyFetch('/api/works');
 .badges {
     margin-bottom: 2rem;
     .badge {
-        background-color: $tertiary;
+        background-color: var(--bg-tertiary);
         border-radius: 15px;
         display: inline-block;
         font-size: 10px;
@@ -83,7 +83,7 @@ const { pending, data: works } = useLazyFetch('/api/works');
         }
     }
     p {
-        color: white;
+        color: var(--text-primary);
     }
 }
 

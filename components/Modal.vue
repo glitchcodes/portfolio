@@ -43,7 +43,7 @@ const closeModal = () => {
 .modal--container {
   margin: 40px auto 0;
   padding: 20px 30px;
-  background-color: rgb(14, 19, 31);
+  background-color: var(--bg-secondary);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;

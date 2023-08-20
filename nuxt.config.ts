@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     ],
     modules: [
         '@nuxtjs/google-fonts',
+        '@nuxtjs/color-mode',
         '@nuxtjs/supabase'
     ],
     googleFonts: {
