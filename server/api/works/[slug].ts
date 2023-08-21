@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     const client = serverSupabaseClient<Database>(event);
 
     const { data, error } = await client.from('works')
-        .select('slug, name, description, background, services, work_screenshots (image), work_testimonials (testimony, reviewer, reviewer_role)')
+        .select('slug, name, description, background, services, example_title, example_link, work_screenshots (image), work_testimonials (testimony, reviewer, reviewer_role)')
         .eq('slug', params.slug)
         .limit(1)
         .single()

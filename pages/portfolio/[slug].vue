@@ -18,7 +18,7 @@
           </div>
       </div>
 
-      <div class="row">
+      <div class="row" style="margin-bottom: 2rem;">
           <div class="column column-25">
               <p class="subtitle">Type of Work</p>
           </div>
@@ -26,6 +26,18 @@
               {{ work!.services }}
           </div>
       </div>
+
+      <div v-if="work.example_title.length > 0" class="row">
+          <div class="column column-25">
+              <p class="subtitle">Example</p>
+          </div>
+          <div class="column">
+              <a :href="work.example_link" class="button button-primary">
+                  {{ work.example_title }}
+              </a>
+          </div>
+      </div>
+
       <!-- Testimonials -->
       <h3 v-if="work.work_testimonials.length > 0" style="margin: 4rem 0;">Testimonials</h3>
 
