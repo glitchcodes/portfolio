@@ -146,6 +146,26 @@ footer {
   }
 }
 
+// Portfolio
+.portfolio-item {
+  width: 100%;
+  border-radius: 1rem;
+  &.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    height: 428px;
+  }
+  img {
+    border-radius: 1rem;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  p {
+    color: var(--text-primary);
+  }
+}
+
 // Transition
 .slide-right-enter-active,
 .slide-right-leave-active {
@@ -188,5 +208,14 @@ footer {
       flex-basis: 50%!important;
       padding: 1rem!important;
     }
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
   }
 }

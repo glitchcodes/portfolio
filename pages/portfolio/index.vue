@@ -14,7 +14,19 @@
                 </nuxt-link>
             </div>
         </div>
-        <div class="row" style="margin-top: 2rem;">
+
+        <!-- Skeleton Loading -->
+        <div v-if="pending" class="row">
+            <div class="column">
+                <div class="portfolio-item skeleton"></div>
+            </div>
+            <div class="column">
+                <div class="portfolio-item skeleton"></div>
+            </div>
+        </div>
+        <!-- END Skeleton Loading -->
+
+        <div v-else class="row" style="margin-top: 2rem;">
             <div class="column" v-for="item in works" :key="item.slug">
                 <nuxt-link :to="'/portfolio/' + item.slug" class="portfolio-item">
                     <picture>
@@ -58,33 +70,20 @@ const { pending, data: works } = useLazyFetch('/api/works');
     p { margin-bottom: 0; }
 }
 
-.badges {
-    margin-bottom: 2rem;
-    .badge {
-        background-color: var(--bg-tertiary);
-        border-radius: 15px;
-        display: inline-block;
-        font-size: 10px;
-        padding: 4px 10px;
-        margin-right: 5px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-.portfolio-item {
-    width: 100%;
-    img {
-        border-radius: 1rem;
-        transition: 0.3s;
-        &:hover {
-            transform: scale(1.01);
-        }
-    }
-    p {
-        color: var(--text-primary);
-    }
-}
-
+// Unused CSS
+//
+//.badges {
+//    margin-bottom: 2rem;
+//    .badge {
+//        background-color: var(--bg-tertiary);
+//        border-radius: 15px;
+//        display: inline-block;
+//        font-size: 10px;
+//        padding: 4px 10px;
+//        margin-right: 5px;
+//        &:last-child {
+//            margin-right: 0;
+//        }
+//    }
+//}
 </style>

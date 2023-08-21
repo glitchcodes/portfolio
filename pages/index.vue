@@ -42,9 +42,9 @@
             </a>
         </div>
 
-        <h2 style="margin-bottom: 4rem;" id="about-me">About me</h2>
+        <h2 style="margin: 4rem 0;" id="about-me">About me</h2>
 
-        <div class="row" style="align-items: center">
+        <div class="row" style="align-items: center; margin-bottom: 8rem;">
             <div class="tech-stack column">
                 <div class="flex">
                     <div class="icon">
@@ -91,6 +91,31 @@
                 </p>
             </div>
         </div>
+
+        <h2 style="margin-bottom: 4rem;" id="recent-works">Recent works</h2>
+
+        <!-- Skeleton Loading -->
+        <div v-if="pending" class="row">
+            <div class="column">
+                <div class="portfolio-item skeleton"></div>
+            </div>
+            <div class="column">
+                <div class="portfolio-item skeleton"></div>
+            </div>
+        </div>
+        <!-- END Skeleton Loading -->
+
+        <div v-else class="row" style="margin-top: 2rem;">
+            <div class="column" v-for="item in works" :key="item.slug">
+                <nuxt-link :to="'/portfolio/' + item.slug" class="portfolio-item">
+                    <picture>
+                        <source type="image/webp" :srcset="item.background + '.webp'">
+                        <img :src="item.background + '.png'" :alt="item.name" />
+                    </picture>
+                    <p style="font-size: 2rem;">{{ item.name }}</p>
+                </nuxt-link>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -109,6 +134,10 @@ const myAge = computed(() => {
     return Math.floor((new Date().valueOf() - new Date("2002-09-11").getTime()) / 3.15576e+10);
 })
 
+// Fetch recent works
+const { pending, data: works } = useLazyFetch('/api/works/recent');
+
+console.log(works.value);
 </script>
 
 <style lang="scss" scoped>
@@ -255,5 +284,4 @@ const myAge = computed(() => {
         opacity: 100%;
     }
 }
-
 </style>
