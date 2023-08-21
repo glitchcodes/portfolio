@@ -78,7 +78,7 @@
                     <img src="/supabase-logo.webp" alt="Supabase Logo" />
                 </div>
             </div>
-            <div class="column">
+            <div class="column" style="margin: 0;">
                 <p>
                     I really liked building stuff that interests me. I was into creating small game servers so that led
                     me to learn more about computers and because of that, I learned on how to manage server resources,

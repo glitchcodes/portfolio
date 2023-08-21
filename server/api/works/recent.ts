@@ -6,9 +6,9 @@ export default defineEventHandler(async (event) => {
     const client = serverSupabaseClient<Database>(event);
 
     const { data, error } = await client.from('works')
-        .select('slug, name, background')
+        .select('slug, name, background, created_at')
         .eq('is_hidden', false)
-        .order('id')
+        .order('created_at', { ascending: false })
         .limit(2);
 
     if (error) {
