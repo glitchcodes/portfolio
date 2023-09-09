@@ -139,7 +139,7 @@ footer {
   }
 
   .icon-links a {
-    color: white;
+    color: var(--text-primary);
     &:not(:last-child) {
       margin-right: 1rem;
     }
