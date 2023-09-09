@@ -70,6 +70,8 @@ export interface Database {
           background: string | null
           created_at: string | null
           description: string | null
+          example_link: string | null
+          example_title: string | null
           id: number
           is_hidden: boolean | null
           name: string
@@ -80,6 +82,8 @@ export interface Database {
           background?: string | null
           created_at?: string | null
           description?: string | null
+          example_link?: string | null
+          example_title?: string | null
           id?: number
           is_hidden?: boolean | null
           name: string
@@ -90,6 +94,8 @@ export interface Database {
           background?: string | null
           created_at?: string | null
           description?: string | null
+          example_link?: string | null
+          example_title?: string | null
           id?: number
           is_hidden?: boolean | null
           name?: string
@@ -113,4 +119,3 @@ export interface Database {
     }
   }
 }
-
