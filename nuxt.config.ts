@@ -18,6 +18,11 @@ export default defineNuxtConfig({
     experimental: {
         payloadExtraction: false
     },
+    nitro: {
+        prerender: {
+            autoSubfolderIndex: false
+        }
+    },
     css: [
         '~/assets/css/main.scss',
         'milligram',
