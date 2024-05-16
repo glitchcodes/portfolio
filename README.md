@@ -1,4 +1,4 @@
-# Personal Portfolio | glitchcodes.me
+# Personal Portfolio | vincetampos.com
 
 This is my personal website showing my portfolio of my previous works. This may go under many changes as I improve
 my skills in website development. This will also serve as my future reference in my resume.
@@ -25,4 +25,4 @@ $ npm run generate
 ```
 
 ## Live Preview
-https://glitchcodes.netlify.app/
+https://vincetampos.com
