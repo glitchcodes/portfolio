@@ -136,8 +136,6 @@ const myAge = computed(() => {
 
 // Fetch recent works
 const { pending, data: works } = useLazyFetch('/api/works/recent');
-
-console.log(works.value);
 </script>
 
 <style lang="scss" scoped>
