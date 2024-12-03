@@ -27,6 +27,21 @@
           </div>
       </div>
 
+      <!-- Metadata -->
+      <div v-for="metadata in work.work_metadata" :key="`metadata-${ metadata.id }`" class="row">
+        <div class="column column-25">
+          <p class="subtitle">{{ metadata.name }}</p>
+        </div>
+        <div class="column">
+            <ul v-if="metadata.type === 'list'">
+                <li v-for="item in metadataList(metadata.content)">
+                    {{ item }}
+                </li>
+            </ul>
+        </div>
+      </div>
+      <!-- END Metadata -->
+
       <div v-if="work.example_title.length > 0" class="row">
           <div class="column column-25">
               <p class="subtitle">Example</p>
@@ -74,6 +89,8 @@
 </template>
 
 <script setup lang="ts">
+    import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
     const route = useRoute();
 
     // Fetch item
@@ -87,6 +104,10 @@
             { property: 'og:description', content: work.value!.description }
         ]
     })
+
+    const metadataList = (list: string) => {
+        return list.split(';');
+    }
 </script>
 
 <style scoped lang="scss">

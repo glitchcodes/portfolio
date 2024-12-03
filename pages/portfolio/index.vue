@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Database } from "~/types/database";
+import type { Database } from "~/types/database";
 
 useHead({
     title: 'Portfolio',

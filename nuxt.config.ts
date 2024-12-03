@@ -38,5 +38,8 @@ export default defineNuxtConfig({
         families: {
             Karla: [400, 700]
         }
+    },
+    supabase: {
+        redirect: false
     }
 })

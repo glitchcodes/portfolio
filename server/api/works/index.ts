@@ -1,9 +1,9 @@
 import { createError } from "h3";
-import { Database } from "~/types/database";
 import { serverSupabaseClient } from "#supabase/server";
+import type { Database } from "~/types/database";
 
 export default defineEventHandler(async (event) => {
-    const client = serverSupabaseClient<Database>(event);
+    const client = await serverSupabaseClient<Database>(event);
 
     const { data, error } = await client.from('works')
         .select('slug, name, background, created_at')

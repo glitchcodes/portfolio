@@ -28,7 +28,12 @@
                 </div>
                 <div class="icon-links">
                     <a href="https://github.com/glitchcodes" target="_blank">
-                        <font-awesome-icon :icon="['fab', 'github']" />
+                        <client-only>
+                            <font-awesome-icon :icon="['fab', 'github']" />
+                        </client-only>
+                        <div class="sr-only">
+                            Github
+                        </div>
                     </a>
                 </div>
             </div>
