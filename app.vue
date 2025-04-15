@@ -50,7 +50,24 @@
             <a href="https://www.linkedin.com/in/vincent-paul-tampos/" target="_blank" class="card card-vertical">
                 <img width="50" src="/linkedin-logo.png" alt="LinkedIn Logo" style="padding: 8px">
                 <div class="card-content flex align-items-center flex-grow">
-                    <span class="flex-grow">Vincent Paul Tampos</span>
+                    <div class="flex-grow">
+                        <p style="margin-bottom: 0">LinkedIn</p>
+                        <span>Vincent Paul Tampos</span>
+                    </div>
+                    <client-only>
+                        <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" />
+                    </client-only>
+                </div>
+            </a>
+
+            <a href="https://github.com/glitchcodes" target="_blank" class="card card-vertical">
+                <img v-if="colorMode.value === 'light'" width="50" src="/github-logo-dark.svg" alt="GitHub Logo" style="padding: 8px">
+                <img v-if="colorMode.value === 'dark'" width="50" src="/github-logo-light.svg" alt="GitHub Logo" style="padding: 8px">
+                <div class="card-content flex align-items-center flex-grow">
+                    <div class="flex-grow">
+                        <p style="margin-bottom: 0">GitHub</p>
+                        <span>glitchcodes</span>
+                    </div>
                     <client-only>
                         <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" />
                     </client-only>
@@ -61,8 +78,11 @@
                 <img width="50" src="/discord-logo.svg" alt="Discord Logo" style="padding: 8px">
                 <div class="card-content flex align-items-center flex-grow">
                     <transition name="fade" mode="out-in">
-                        <span v-if="!isDiscordCopied" class="flex-grow">glitchzyu</span>
-                        <span v-else class="flex-grow">Copied to clipboard!</span>
+                        <div class="flex-grow">
+                            <p style="margin-bottom: 0">Discord</p>
+                            <span v-if="!isDiscordCopied">glitchzyu</span>
+                            <span v-else>Copied to clipboard!</span>
+                        </div>
                     </transition>
 
                     <client-only>
@@ -76,8 +96,11 @@
                 <img width="40" src="/email-icon.png" alt="Email Logo" style="margin: .5rem 14px .5rem .5rem;">
                 <div class="card-content  flex align-items-center flex-grow">
                     <transition name="fade" mode="out-in">
-                        <span v-if="!isEmailCopied" class="flex-grow">binstampos@gmail.com</span>
-                        <span v-else class="flex-grow">Copied to clipboard!</span>
+                        <div class="flex-grow">
+                            <p style="margin-bottom: 0">E-mail</p>
+                            <span v-if="!isEmailCopied">binstampos@gmail.com</span>
+                            <span v-else>Copied to clipboard!</span>
+                        </div>
                     </transition>
                     <client-only>
                         <font-awesome-icon :icon="['fas', 'copy']" />
@@ -91,6 +114,8 @@
 </template>
 
 <script lang="ts" setup>
+const colorMode = useColorMode();
+
 const showContact = ref(false);
 const isDiscordCopied = ref(false);
 const isEmailCopied = ref(false);

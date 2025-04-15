@@ -96,7 +96,7 @@ blockquote { border-left: 0.3rem solid var(--bg-tertiary)!important; }
 .subtitle { color: rgb(139, 147, 156); }
 
 // Card
-a.card {
+a.card, a.card:hover {
   color: inherit;
 }
 .card {
