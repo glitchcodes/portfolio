@@ -5,7 +5,6 @@
 
             <nuxt-link to="/" class="navbar--brand">
                 <img src="/logo-navbar.png" alt="GlitchDZN Logo">
-                <span>GlitchDZN</span>
             </nuxt-link>
 
             <ul class="navbar--links">
@@ -23,7 +22,7 @@
         <footer>
             <div class="flex align-items-center justify-content-between">
                 <div>
-                    <p style="margin-bottom: 0;">GlitchDZN &copy; {{ currentYear }}</p>
+                    <p style="margin-bottom: 0;">Vincent Paul Tampos &copy; {{ currentYear }}</p>
                     <p style="margin-bottom: 0;">This website is <a href="https://github.com/glitchcodes/portfolio" target="_blank">open-source</a></p>
                 </div>
                 <div class="icon-links">
@@ -45,26 +44,44 @@
             <h5>Interested?</h5>
 
             <p class="subtitle">
-                Contact me in any of the methods below. Click to copy to your clipboard.
+                Contact me in any of the platforms below
             </p>
 
+            <a href="https://www.linkedin.com/in/vincent-paul-tampos/" target="_blank" class="card card-vertical">
+                <img width="50" src="/linkedin-logo.png" alt="LinkedIn Logo" style="padding: 8px">
+                <div class="card-content flex align-items-center flex-grow">
+                    <span class="flex-grow">Vincent Paul Tampos</span>
+                    <client-only>
+                        <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" />
+                    </client-only>
+                </div>
+            </a>
+
             <div class="card card-vertical" @click="copyToClipboard('discord')">
-                <img width="50" src="/discord-logo.svg" alt="Discord Logo">
-                <div class="card-content">
+                <img width="50" src="/discord-logo.svg" alt="Discord Logo" style="padding: 8px">
+                <div class="card-content flex align-items-center flex-grow">
                     <transition name="fade" mode="out-in">
-                        <span v-if="!isDiscordCopied">glitchzyu</span>
-                        <span v-else>Copied to clipboard!</span>
+                        <span v-if="!isDiscordCopied" class="flex-grow">glitchzyu</span>
+                        <span v-else class="flex-grow">Copied to clipboard!</span>
                     </transition>
+
+                    <client-only>
+                        <font-awesome-icon v-if="!isDiscordCopied" :icon="['fas', 'copy']" />
+                        <font-awesome-icon v-else :icon="['fas', 'circle-check']" />
+                    </client-only>
                 </div>
             </div>
 
             <div class="card card-vertical" @click="copyToClipboard('email')">
                 <img width="40" src="/email-icon.png" alt="Email Logo" style="margin: .5rem 14px .5rem .5rem;">
-                <div class="card-content">
+                <div class="card-content  flex align-items-center flex-grow">
                     <transition name="fade" mode="out-in">
-                        <span v-if="!isEmailCopied">binstampos@gmail.com</span>
-                        <span v-else>Copied to clipboard!</span>
+                        <span v-if="!isEmailCopied" class="flex-grow">binstampos@gmail.com</span>
+                        <span v-else class="flex-grow">Copied to clipboard!</span>
                     </transition>
+                    <client-only>
+                        <font-awesome-icon :icon="['fas', 'copy']" />
+                    </client-only>
                 </div>
             </div>
 

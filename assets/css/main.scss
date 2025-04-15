@@ -96,6 +96,9 @@ blockquote { border-left: 0.3rem solid var(--bg-tertiary)!important; }
 .subtitle { color: rgb(139, 147, 156); }
 
 // Card
+a.card {
+  color: inherit;
+}
 .card {
   margin-bottom: 1rem;
   &.card-vertical {
@@ -104,17 +107,23 @@ blockquote { border-left: 0.3rem solid var(--bg-tertiary)!important; }
     background: var(--bg-secondary-alt);
     padding: 1rem;
     border-radius: 1rem;
+    min-height: 64px;
     img { margin-right: 10px; }
   }
   img { vertical-align: middle; }
   .card-content {
     overflow: hidden;
+    padding-right: 8px;
   }
 }
 
 // Flex
 .flex {
   display: flex;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .align-items-center {

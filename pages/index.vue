@@ -3,7 +3,7 @@
         <div class="landing row">
             <div class="column">
                 <div>
-                    <h3 class="lead">Vincent Tampos</h3>
+                    <h3 class="lead">Vincent Paul Tampos</h3>
                     <p class="subtitle">Web Developer</p>
                     <blockquote>
                         <p>
@@ -14,6 +14,7 @@
                         </p>
                     </blockquote>
                     <nuxt-link to="/portfolio" class="button button-secondary">View Portfolio</nuxt-link>
+
                 </div>
             </div>
 
